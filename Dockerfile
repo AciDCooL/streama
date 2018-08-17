@@ -1,10 +1,11 @@
 FROM openjdk:8-jre-slim
 VOLUME /data
 EXPOSE 8080
-ENV ACTIVE_PROFILE=docker
+ENV ACTIVE_PROFILE=mysqlacid
 
 WORKDIR /app
 COPY docker/entrypoint.sh entrypoint.sh
+COPY docker/application.yml application.yml
 COPY build/libs/*.war streama.war
 
 ENTRYPOINT ["sh", "entrypoint.sh"]

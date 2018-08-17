@@ -1,6 +1,6 @@
 # Place this file next to the streama-[version].war on deployment
 environments:
-    production:
+    mysqlacid:
         dataSource:
             driverClassName:  'com.mysql.jdbc.Driver'
             url: jdbc:mysql://mysql/streama
