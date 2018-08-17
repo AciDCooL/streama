@@ -11,5 +11,5 @@ if [[ ! -e /app/application.yml ]]; then
 fi
 
 if [[ ! -e /app/streama.war ]]; then
-   wget $(wget -qO- 'https://api.github.com/repos/streamaserver/streama/releases/latest' | grep browser_download_url | cut -d '"' -f 4)
+   wget $(wget -qO- 'https://api.github.com/repos/streamaserver/streama/releases/latest' | grep browser_download_url | cut -d '"' -f 4) -P /app
 fi
