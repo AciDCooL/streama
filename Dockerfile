@@ -5,7 +5,6 @@ ENV ACTIVE_PROFILE=docker
 
 WORKDIR /app
 COPY docker/entrypoint.sh /app/entrypoint.sh
-COPY build/libs/*.war /app/streama.war
 COPY docker/init.sh /app/init.sh
 RUN chmod +x /app/init.sh && /app/init.sh
 
