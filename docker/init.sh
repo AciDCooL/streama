@@ -5,10 +5,10 @@ if [[ ! -e /data/application.yml ]]; then
 fi
 
 if [[ ! -e /app/application.yml ]]; then
-	ln -s /data/application.yml /app/application.yml
+	cp -rf /data/application.yml /app/application.yml
   else
 	rm -rf /app/application.yml
-	ln -s /data/application.yml /app/application.yml
+	cp -rf /data/application.yml /app/application.yml
 fi
 
 if [[ ! -e /app/streama.war ]]; then
