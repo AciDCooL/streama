@@ -4,9 +4,9 @@ EXPOSE 8080
 ENV ACTIVE_PROFILE=docker
 
 WORKDIR /app
-COPY docker/entrypoint.sh entrypoint.sh
-COPY build/libs/*.war streama.war
-COPY docker/init.sh init.sh
-CMD chmod +x init.sh && /app/init.sh
+COPY docker/entrypoint.sh /app/entrypoint.sh
+COPY build/libs/*.war /app/streama.war
+COPY docker/init.sh /app/init.sh
+RUN chmod +x /app/init.sh && /app/init.sh
 
 ENTRYPOINT ["sh", "entrypoint.sh"]
