@@ -11,6 +11,6 @@ if [[ ! -e /app/application.yml ]]; then
 	cp -rf /data/application.yml /app/application.yml
 fi
 
-if [[ ! -e /app/streama.war ]]; then
+if [[ ! -e /app/streama.jar ]]; then
    wget $(wget -qO- 'https://api.github.com/repos/streamaserver/streama/releases/latest' | grep browser_download_url | cut -d '"' -f 4) -P /app --output-document=streama.jar
 fi
