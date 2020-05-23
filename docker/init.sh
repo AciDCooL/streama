@@ -1,7 +1,4 @@
 #!/bin/bash
-apt-get update
-apt-get install -y curl
-
 if [[ ! -e /data/application.yml ]]; then
    curl -sf  -o /tmp/application.yml -L https://raw.githubusercontent.com/streamaserver/streama/master/grails-app/conf/application.yml
    cp -rf /tmp/application.yml /data/application.yml
