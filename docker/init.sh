@@ -1,6 +1,6 @@
 #!/bin/bash
 if [[ ! -e /data/application.yml ]]; then
-   wget https://raw.githubusercontent.com/streamaserver/streama/master/grails-app/conf/application.yml -P /tmp
+   curl -sf  -o /tmp/application.yml -L https://raw.githubusercontent.com/streamaserver/streama/master/grails-app/conf/application.yml
    cp -rf /tmp/application.yml /data/application.yml
 fi
 
